@@ -1,12 +1,12 @@
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 #root {
-  max-width: 1280px;
+  /* width: 1280px; */
+  width: 100vw;
   margin: 0 auto;
-  padding: 2rem;
+  
   text-align: center;
+  font-weight: 10px;
+
 }
 
 .logo {
@@ -43,4 +43,65 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+.Name {
+  margin-top: -10px;
+}
+
+.card {
+  width: 500px;
+  margin: auto;
+  background-color: #eddcd9;
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  height: 300px;
+  margin-right: 10px;
+}
+#card-head1{
+  background-color: #f2ebe9;
+}
+
+#card-body1{
+  
+  width: 100%;
+  padding: 20px;
+}
+
+
+input[type=text], input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.card-2{
+  width: 500px;
+  margin: auto;
+  background-color: #303179;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  height: 300px;
+  color: white;
+  margin-left: 100px
+  
+}
+
+#card-head2{
+  background-color: #141850;
+  padding: 10px;
+  color: white;
+}
+
+#card-body2{
+  
+  width: 100%;
+  padding: 20px;
+  padding: 80px;
 }

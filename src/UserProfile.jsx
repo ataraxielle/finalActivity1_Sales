@@ -5,9 +5,9 @@ const UserProfile = ({ name, age }) => {
 
   return (
     <div>
-      <h2>{name}</h2>
+      <h2>Hi {name}!</h2>
       {isOver18 ? (
-        <p>Age: {age}</p>
+        <h5>Age: {age}</h5>
       ) : (
         <p>Sorry, you are too young to view your age.</p>
       )}

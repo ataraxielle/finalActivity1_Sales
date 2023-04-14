@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import UserProfile from './UserProfile';
-
+import React, { useState } from "react";
+import UserProfile from "./UserProfile";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 const App = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const [age, setAge] = useState(0);
 
   const handleSubmit = (e) => {
@@ -12,31 +13,52 @@ const App = () => {
   };
 
   return (
-    
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        </label>
-        <label>
-          Age:
-          <input type="number" value={age} onChange={(e) => setAge(parseInt(e.target.value))} />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
-      <UserProfile name={name} age={age} />
-      <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+      <div className="container-fluid px-0">
+        <div className="row">
+          <div className="col-6">
+            <div class="card">
+              <div class="card-header" id = "card-head1">
+                <h3>INPUT</h3>
+              </div>
+
+              <div class="card-body" id = "card-body1">
+                <form onSubmit={handleSubmit}>
+                  <div className="Name">
+                    <h6>Name</h6>
+                    <label>
+                      <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
+                    </label>
+                  </div>
+                  <h6>Age</h6>
+                  <label>
+                    <input
+                      type="number"
+                      value={age}
+                      onChange={(e) => setAge(parseInt(e.target.value))}
+                    />
+                  </label>
+                  {/* <button type="submit">Submit</button> */}
+                </form>
+              </div>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className = "card-2">
+            <div class="card-header" id = "card-head2">
+                <h3>OUTPUT</h3>
+              </div>
+              <div className = "card-body" id = "card-body2">
+            <UserProfile name={name} age={age} />
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
